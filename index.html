@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>دولابي</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf6fb;--card:#fff;--fg:#3a2f4a;--pink:#ef9db5;--pk2:#f8d3de;--blue:#cfe4f5;--yel:#fbe9b0;--mut:#9a8fa8;--line:#f0dbe6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2b2140;--card:#3a2d52;--fg:#fff3f8;--mut:#bcb0d0;--line:#4d3f6b;--pk2:#5b3d63}}
+:root[data-theme="dark"]{--bg:#2b2140;--card:#3a2d52;--fg:#fff3f8;--mut:#bcb0d0;--line:#4d3f6b;--pk2:#5b3d63}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{background:var(--bg);color:var(--fg);font-family:'Tajawal',system-ui,sans-serif;display:flex;flex-direction:column;max-width:520px;margin:auto;position:relative}
+.script{font-family:'Great Vibes','Brush Script MT',cursive;color:var(--pink);direction:ltr}
+header{display:flex;align-items:center;justify-content:space-between;padding:6px 16px 0}
+.logo{font-size:44px;line-height:1.1}
+.theme{background:var(--card);border:1.5px solid var(--pk2);border-radius:50%;width:38px;height:38px;font-size:17px;cursor:pointer;color:var(--fg)}
+.scal{height:12px;background:radial-gradient(circle at 12px 100%,var(--pk2) 11.5px,transparent 12px) 0 0/24px 12px repeat-x}
+main{flex:1;overflow-y:auto;padding:0 16px 16px}
+nav{display:flex;background:var(--card);border-top:2px solid var(--pk2);padding:6px 4px}
+nav button{flex:1;background:none;border:0;color:var(--mut);font:inherit;font-size:11px;padding:6px 0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px}
+nav .i{font-size:22px;filter:grayscale(1);opacity:.6}
+nav .on{color:var(--pink);font-weight:700}nav .on .i{filter:none;opacity:1}
+.fr{border:2.5px solid var(--pink);box-shadow:0 0 0 4px var(--pk2);border-radius:22px;background:var(--card);overflow:hidden;margin:6px 4px 22px}
+.fr .in2{padding:12px}
+.row{display:flex;align-items:center;gap:10px}
+.av{width:42px;height:42px;border-radius:50%;background:var(--pk2);display:grid;place-items:center;font-size:21px;flex:none}
+.pic{height:300px;border-radius:16px;margin:10px 0 4px;overflow:hidden;position:relative;cursor:pointer}
+.pic svg{position:absolute;inset:0;height:100%}
+.badge{position:absolute;top:8px;left:8px;background:#fffc;color:#3a2f4a;border-radius:20px;padding:3px 10px;font-size:12px;font-weight:700}
+.cap{font-family:'Great Vibes',cursive;color:var(--pink);font-size:28px;text-align:center;direction:ltr;margin:2px 0 6px}
+.act{display:flex;gap:16px;color:var(--mut)}
+.act button{background:none;border:0;font:inherit;color:inherit;font-size:15px;cursor:pointer}
+.act .liked{color:var(--pink)}
+.stories{display:flex;gap:14px;overflow-x:auto;padding:10px 4px 14px}
+.st{text-align:center;font-size:12px;cursor:pointer;flex:none}
+.ring{width:64px;height:64px;border-radius:50%;padding:3px;background:conic-gradient(var(--pink),var(--yel),var(--blue),var(--pink));display:grid;place-items:center;margin-bottom:3px}
+.ring .av{width:100%;height:100%;border:3px solid var(--bg);font-size:28px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cat{background:var(--card);border:2px solid var(--pk2);border-radius:22px;padding:20px 8px;text-align:center}
+.cat span{font-size:38px;display:block;margin-bottom:4px}
+.btn{background:var(--pink);color:#fff;border:0;border-radius:18px;padding:13px;font:inherit;font-weight:700;width:100%;cursor:pointer;display:block;text-align:center;margin-top:10px}
+.btn.alt{background:none;color:var(--pink);border:2px solid var(--pink)}
+.score{font-size:64px;font-weight:700;color:var(--pink);text-align:center}
+.dots{display:flex;justify-content:center;gap:10px;margin:12px 0}
+.dots i{width:52px;height:52px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px var(--pk2)}
+.msg{display:flex;gap:12px;align-items:center;padding:12px 4px;border-bottom:1.5px dashed var(--pk2);cursor:pointer}
+.bub{max-width:75%;padding:9px 15px;border-radius:18px;margin:4px 0;color:#3a2f4a}
+.in{display:flex;gap:8px;padding:10px 0}
+input{width:100%;background:var(--card);color:var(--fg);border:2px solid var(--pk2);border-radius:16px;padding:12px;font:inherit;margin-top:10px}
+.send{background:var(--pink);color:#fff;border:0;border-radius:50%;width:44px;height:44px;font-size:18px;cursor:pointer;flex:none;margin-top:10px}
+.sheet{position:fixed;inset:auto 0 0 0;max-width:520px;margin:auto;background:var(--card);border-radius:26px 26px 0 0;padding:16px;border:2.5px solid var(--pink);max-height:60%;overflow:auto;z-index:5}
+h3{margin:6px 0 12px}
+.stats{display:flex;justify-content:space-around;margin:14px 0}.stats b{display:block;font-size:20px;text-align:center}
+.lg{padding:10px 8px;text-align:center}
+.lg .lf{height:230px}.lg .logo{font-size:64px}
+.lg p{color:var(--mut);margin-bottom:6px}
+.lnk{background:none;border:0;color:var(--mut);font:inherit;margin-top:14px;cursor:pointer}
+.vw{position:fixed;inset:0;max-width:520px;margin:auto;z-index:10;background:var(--bg);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.pb{display:flex;gap:4px;padding:10px 12px 6px}
+.pb i{flex:1;height:3px;background:var(--pk2);border-radius:3px;overflow:hidden;position:relative}
+.pb i.d{background:var(--pink)}
+.pb i.a::after{content:'';position:absolute;inset:0;background:var(--pink);transform-origin:right;animation:pg 4.5s linear forwards}
+@keyframes pg{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.vh{padding:4px 14px}.vh b{flex:1}
+.x{background:none;border:0;font-size:22px;color:var(--fg);cursor:pointer}
+.vf{flex:1;position:relative;margin:6px 14px;border:2.5px solid var(--pink);box-shadow:0 0 0 4px var(--pk2);border-radius:22px;overflow:hidden}
+.vf svg{position:absolute;inset:0;height:100%}
+.tz{position:absolute;inset:0;display:flex}.tz div{flex:1}
+.vb{padding:0 14px 8px}
+</style>
+</head>
+<body>
+<header id="hd"><button class="theme" id="th">🌙</button><div class="logo script">dulabi</div><div style="width:38px"></div></header>
+<div class="scal" id="sc"></div>
+<main id="m"></main>
+<nav id="nav"></nav>
+<div id="sh"></div>
+<script>
+const tabs=[['home','🤍','الرئيسية'],['wd','👗','دولابي'],['match','📷','تناسق'],['msg','💬','رسايل'],['me','🌸','أنا']];
+let tab='home',chat=null,user=null,V=null,T=null;
+try{user=localStorage.getItem('dl')}catch(e){}
+const fig=(t,b,h,a,sk)=>`<svg viewBox="0 0 200 260" preserveAspectRatio="xMidYMax meet"><g fill="${a}" opacity=".7"><path d="M24 50l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/><path d="M170 96l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/><path d="M164 36c-6-8 6-12 8-4 2-8 14-4 8 4l-8 8z"/><circle cx="30" cy="150" r="4"/><circle cx="176" cy="170" r="3"/></g><g stroke="#3a2f4a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M72 62c-20 40-22 92-8 126 10-8 14-60 18-92zM128 62c20 40 22 92 8 126-10-8-14-60-18-92z" fill="${h}"/><path d="${sk?'M68 140h64l24 96H44z':'M70 140h60l18 98h-38l-10-66-10 66H52z'}" fill="${b}"/><path d="M82 94l-10 14c0 28-4 32-4 32h64s-4-4-4-32l-10-14z" fill="${t}"/><path d="M92 88h16v10l-8 8-8-8z" fill="#fde3d3"/><ellipse cx="100" cy="62" rx="26" ry="29" fill="#fde3d3"/><path d="M73 60c2-30 52-34 54 0-16-8-36-10-54 0z" fill="${h}"/><path d="M52 238h36v10H50zM112 238h36l2 10h-38z" fill="${a}"/></g><circle cx="90" cy="66" r="2.2" fill="#3a2f4a"/><circle cx="110" cy="66" r="2.2" fill="#3a2f4a"/><circle cx="83" cy="74" r="5" fill="#f58aa5" opacity=".5"/><circle cx="117" cy="74" r="5" fill="#f58aa5" opacity=".5"/><path d="M95 77q5 4 10 0" stroke="#d9627f" fill="none" stroke-width="2"/></svg>`;
+const posts=[
+{u:'ريم',e:'🌷',q:'I believe in pink',c:['#ef9db5','#cfe4f5','#7a4d38','#ef7f9e'],m:96,l:128,cm:['شكلك خيال 😍','وين اشتريتي البنطلون؟']},
+{u:'ريم',e:'🌷',q:'soft days',c:['#fff','#9ab6d6','#7a4d38','#f8d3de'],m:90,l:77,cm:[],sk:1},
+{u:'نوف',e:'🌸',q:'laughing is the best',c:['#fbe9b0','#3a2f4a','#5a3a2a','#ef9db5'],m:84,l:89,cm:['ذوقك حلو']},
+{u:'لمى',e:'🌙',q:'moon, tell me',c:['#b9a6d9','#2a1f3d','#2a1f3d','#f8d3de'],m:92,l:214,cm:[],sk:1},
+{u:'سارة',e:'🎀',q:'xoxo',c:['#f8d3de','#fff','#b87a4f','#cfe4f5'],m:88,l:63,cm:['❤️'],sk:1}];
+const users=['ريم','نوف','لمى','سارة'],chats={ريم:[['وش رايك بالأوتفت؟',0]],نوف:[['حلو الجاكيت!',0]],لمى:[['ارسلي لي الصورة 🤍',0]]};
+const pf=p=>fig(...p.c,p.sk);
+const bg=p=>`linear-gradient(170deg,${p.c[3]}44,${p.c[1]=='#fff'?'#cfe4f5':p.c[1]}55)`;
+function render(){
+ const li=!!user;['hd','sc','nav'].forEach(i=>document.getElementById(i).style.display=li?'':'none');
+ const m=document.getElementById('m');
+ if(!li){m.innerHTML=`<div class="lg"><div class="lf">${fig('#ef9db5','#cfe4f5','#7a4d38','#ef7f9e')}</div><div class="logo script">dulabi</div><p class="cap" style="font-size:24px">I believe in outfits ♡</p>
+ <input type="text" id="un" placeholder="اسم المستخدم أو الإيميل"><input type="password" id="pw" placeholder="كلمة المرور">
+ <button class="btn" onclick="login()">دخول</button><button class="btn alt" onclick="login(1)">دخول كضيفة 🌸</button><button class="lnk">ما عندك حساب؟ سجّلي الحين</button></div>`;return}
+ document.getElementById('nav').innerHTML=tabs.map(t=>`<button class="${t[0]==tab?'on':''}" onclick="go('${t[0]}')"><span class="i">${t[1]}</span>${t[2]}</button>`).join('');
+ if(tab=='home')m.innerHTML=`<div class="stories"><div class="st" onclick="go('match')"><div class="ring" style="background:var(--pk2)"><div class="av">＋</div></div>قصتك</div>${users.map(u=>`<div class="st" onclick="openV('${u}')"><div class="ring"><div class="av">${posts.find(p=>p.u==u).e}</div></div>${u}</div>`).join('')}</div>`+posts.map((p,i)=>`<div class="fr"><div class="in2"><div class="row"><div class="av">${p.e}</div><b>${p.u}</b></div>
+ <div class="pic" style="background:${bg(p)}" onclick="openV('${p.u}',${posts.filter(x=>x.u==p.u).indexOf(p)})">${pf(p)}<span class="badge">تناسق ${p.m}% 💗</span></div><div class="cap">${p.q}</div>
+ <div class="act"><button class="${p.lk?'liked':''}" onclick="like(${i})">${p.lk?'❤️':'🤍'} ${p.l}</button><button onclick="cmt(${i})">💬 ${p.cm.length}</button><button>✈️</button></div></div><div class="scal"></div></div>`).join('');
+ if(tab=='wd')m.innerHTML=`<h3>دولابي</h3><div class="grid">${[['👗','فساتين'],['👚','بلايز'],['🧕','عبايات'],['👠','أحذية'],['👜','شنط'],['💍','اكسسوارات']].map(c=>`<div class="cat"><span>${c[0]}</span>${c[1]}</div>`).join('')}</div>`;
+ if(tab=='match')m.innerHTML=`<h3>فحص التناسق</h3><div class="fr"><div class="in2" id="res" style="text-align:center"><div style="font-size:60px">📷</div><p style="color:var(--mut);margin:6px 0 10px">صوّري أوتفتك أو اختاريه من الاستديو</p>
+ <label class="btn">صوّري<input type="file" accept="image/*" capture="environment" hidden onchange="an(this)"></label><label class="btn alt">من الاستديو<input type="file" accept="image/*" hidden onchange="an(this)"></label></div></div>`;
+ if(tab=='msg'){if(chat){const c=chats[chat];m.innerHTML=`<div class="row" style="margin:8px 0"><button class="theme" onclick="chat=null;render()">→</button><b>${chat}</b></div>${c.map(x=>`<div style="display:flex;justify-content:${x[1]?'flex-start':'flex-end'}"><div class="bub" style="background:${x[1]?'#ef9db5':'#f8d3de'}">${x[0]}</div></div>`).join('')}<div class="in"><input type="text" id="ci" placeholder="اكتبي رسالة..."><button class="send" onclick="sendM()">➤</button></div>`}
+ else m.innerHTML=`<h3>الرسايل</h3>`+Object.keys(chats).map(n=>`<div class="msg" onclick="chat='${n}';render()"><div class="av">${posts.find(p=>p.u==n).e}</div><div><b>${n}</b><div style="color:var(--mut);font-size:14px">${chats[n].slice(-1)[0][0]}</div></div></div>`).join('')}
+ if(tab=='me')m.innerHTML=`<div style="text-align:center;padding-top:14px"><div class="av" style="width:96px;height:96px;font-size:50px;margin:auto">🌸</div><h3 style="margin-top:10px">${user}</h3><div class="stats"><div><b>24</b>أوتفت</div><div><b>1.2K</b>متابعة</div><div><b>310</b>تتابع</div></div><div class="grid">${posts.slice(0,4).map(p=>`<div class="fr" style="margin:0;height:150px;background:${bg(p)}"><div style="position:relative;height:100%">${pf(p)}</div></div>`).join('')}</div><button class="btn alt" onclick="logout()">تسجيل الخروج</button></div>`;
+}
+function login(g){const v=document.getElementById('un')?.value.trim();user=g?'ضيفة':(v||'ضيفة');try{localStorage.setItem('dl',user)}catch(e){}render()}
+function logout(){user=null;try{localStorage.removeItem('dl')}catch(e){}render()}
+function go(t){tab=t;chat=null;render();document.getElementById('m').scrollTop=0}
+function like(i){const p=posts[i];p.lk=!p.lk;p.l+=p.lk?1:-1;render()}
+function cmt(i){const p=posts[i];document.getElementById('sh').innerHTML=`<div class="sheet"><h3>التعليقات</h3>${p.cm.map(c=>`<div style="padding:8px 0">🌸 ${c}</div>`).join('')||'<p style="color:var(--mut)">كوني أول من يعلّق</p>'}<div class="in"><input type="text" id="ti" placeholder="اكتبي تعليق..."><button class="send" onclick="addC(${i})">➤</button></div><button class="btn alt" onclick="document.getElementById('sh').innerHTML=''">إغلاق</button></div>`}
+function addC(i){const v=document.getElementById('ti').value.trim();if(!v)return;posts[i].cm.push(v);cmt(i);render()}
+function sendM(){const v=document.getElementById('ci').value.trim();if(!v)return;chats[chat].push([v,1]);render()}
+function openV(u,s){V={l:posts.filter(p=>p.u==u),i:s||0};showV()}
+function showV(){clearTimeout(T);const p=V.l[V.i];document.getElementById('sh').innerHTML=`<div class="vw"><div class="pb">${V.l.map((_,k)=>`<i class="${k<V.i?'d':k==V.i?'a':''}"></i>`).join('')}</div><div class="row vh"><div class="av">${p.e}</div><b>${p.u}</b><button class="x" onclick="closeV()">✕</button></div>
+ <div class="vf" style="background:${bg(p)}">${pf(p)}<span class="badge">تناسق ${p.m}% 💗</span><div class="tz"><div onclick="stepV(-1)"></div><div onclick="stepV(1)"></div></div></div><div class="cap" style="font-size:32px;margin-top:6px">${p.q}</div>
+ <div class="vb"><div class="in" style="padding:0"><input type="text" id="vi" placeholder="ردّي على ${p.u}..." onfocus="clearTimeout(T)"><button class="send" onclick="vSend()">♡</button></div></div></div>`;T=setTimeout(()=>stepV(1),4500)}
+function stepV(d){V.i+=d;if(V.i<0)V.i=0;if(V.i>=V.l.length)return closeV();showV()}
+function vSend(){const i=document.getElementById('vi'),v=i.value.trim();if(!v)return;V.l[V.i].cm.push(v);i.value='';i.placeholder='انرسل 💗'}
+function closeV(){clearTimeout(T);V=null;document.getElementById('sh').innerHTML='';render()}
+function an(inp){const f=inp.files[0];if(!f)return;const im=new Image();im.onload=()=>{
+ const cv=document.createElement('canvas'),w=60,h=Math.round(60*im.height/im.width);cv.width=w;cv.height=h;const x=cv.getContext('2d');x.drawImage(im,0,0,w,h);
+ const d=x.getImageData(0,0,w,h).data,B={};
+ for(let y=h*.2|0;y<h*.8;y++)for(let X=w*.2|0;X<w*.8;X++){const k=(y*w+X)*4,[r,g,b]=[d[k],d[k+1],d[k+2]],hs=hsl(r,g,b);
+  const key=(hs[1]<.15||hs[2]<.1||hs[2]>.92)?(hs[2]>.5?'n1':'n2'):'h'+(hs[0]/30|0);(B[key]=B[key]||[]).push([r,g,b,hs[0]])}
+ const ks=Object.keys(B).sort((a,b)=>B[b].length-B[a].length).slice(0,3),top=ks.map(k=>B[k]);
+ const pal=top.map(l=>[0,1,2].map(i=>Math.round(l.reduce((s,p)=>s+p[i],0)/l.length)));
+ const hu=ks.map((k,i)=>k[0]=='n'?null:top[i].reduce((s,p)=>s+p[3],0)/top[i].length);
+ let t=0,n=0;for(let i=0;i<hu.length;i++)for(let j=i+1;j<hu.length;j++){n++;if(hu[i]==null||hu[j]==null){t+=1;continue}let df=Math.abs(hu[i]-hu[j]);if(df>180)df=360-df;t+=df<=30?.95:Math.abs(df-180)<=25?.9:Math.abs(df-120)<=20?.75:.4}
+ const s=n?Math.round(t/n*100):100,v=s>=80?'تناسق رهيب 😍':s>=55?'حلو، بس ممكن تحسنينه 🤍':'الألوان مو متناسقة، غيّري قطعة 🌙';
+ document.getElementById('res').innerHTML=`<img src="${im.src}" style="width:100%;max-height:260px;object-fit:cover;border-radius:16px"><div class="score">${s}%</div><div>${v}</div><div class="dots">${pal.map(c=>`<i style="background:rgb(${c})"></i>`).join('')}</div><button class="btn alt" onclick="render()">فحص جديد</button>`};im.src=URL.createObjectURL(f)}
+function hsl(r,g,b){r/=255;g/=255;b/=255;const M=Math.max(r,g,b),m=Math.min(r,g,b),l=(M+m)/2,d=M-m;let h=0,s=0;if(d){s=d/(1-Math.abs(2*l-1));h=M==r?((g-b)/d)%6:M==g?(b-r)/d+2:(r-g)/d+4;h*=60;if(h<0)h+=360}return[h,s,l]}
+const root=document.documentElement;document.getElementById('th').onclick=()=>{const dk=root.dataset.theme=='dark'||(!root.dataset.theme&&matchMedia('(prefers-color-scheme:dark)').matches);root.dataset.theme=dk?'light':'dark'};
+render();
+</script>
+</body>
+</html>
